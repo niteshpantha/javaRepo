@@ -1,0 +1,50 @@
+Algorithm - 1(Pseudo code)
+1. Start
+2. Declaring a variable(highestMarks) of type double. Having an initial value of ArrayListIndex[0]
+   Double highestMarks = studentMarks.get(0);
+
+3. Declaring a variable(highestMarks) of type double. Having an initial value of ArrayListIndex[0]
+   Double lowestMarks = studentMarks.get(0);
+4. For loop starts here.
+    if (highestMarks < studentMarks.get(i)) {
+        highestMarks = studentMarks.get(i);
+    }
+    if (lowestMarks > studentMarks.get(i)) {
+        lowestMarks = studentMarks.get(i);
+    }
+5. For loop ends.
+6. Print highest and lowest marks.
+7. Stop.
+
+Algorithm -2(Pseudo code)
+Mean logic.
+1. Start
+2. Declaring a variable(total) of type double. Having an initial value of 0.0.
+3. For loop starts here.
+    for (int i = 0; i < studentMarks.size(); i++) {
+                total += studentMarks.get(i);
+            }
+4. Declaring a mean logic.
+    double mean = total / studentMarks.size();
+5. Print mean value.
+6. Stop.
+
+Standard Deviation logic.
+1. Start
+2. Declaring a variable(summation) of type double. Having an initial value of 0.0.
+3 For loop starts here.
+ for (int i = 0; i < studentMarks.size(); i++) {
+            double intermediateValue = Math.pow((studentMarks.get(i) - mean), 2);
+            summation += intermediateValue;
+        }
+4. Declaring a variable(divisor) of type int. It holds total number of students - 1
+    int divisor = studentMarks.size() - 1;
+5. Declaring a variable(nextIntermediateValue) of type double. It holds summation by divisor value.
+    double nextIntermediateValue = summation / divisor;
+6. Entering the square root of the intermediateValue.
+    Math.pow(nextIntermediateValue, 0.5)
+7. Stop.
+
+
+
+
