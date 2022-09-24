@@ -1,0 +1,50 @@
+Pseudo Code
+
+Print the top 10 students with the highest total marks and top 10 students with the lowest total marks. (algorithm 1)
+
+1. Start
+
+2. Read the csv file
+
+3. Keep all the data from the csv file in student pojo.
+
+4. Sort the data in ascending order. (For printing top 10 lowest marks)
+	
+        for (int i = 0; i < 10; i++) {
+            Student student = studentsWithTotalMarks.get(i);
+            System.out.printf("%-30s %-30s %-15s %-25s %-25s %-15s %-15s\n", student.getFirstName(), student.getLastName(), student.getIdNumber(), student.getFirstSubMark(), student.getSecondSubMark(), student.getThirdSubMark(), student.getTotalMarks());
+        }
+    }
+    
+5. Sort the data in descending order.  (For printing top 10 highest marks)
+	 for (int i = (studentsWithTotalMarks.size()-1); i > (studentsWithTotalMarks.size()-11); i--) {
+            Student student = studentsWithTotalMarks.get(i);
+            System.out.printf("%-30s %-30s %-15s %-25s %-25s %-15s %-15s\n", student.getFirstName(), student.getLastName(), student.getIdNumber(), student.getFirstSubMark(), student.getSecondSubMark(), student.getThirdSubMark(), student.getTotalMarks());
+        }
+        
+6. End.
+
+
+Create a simple menu system to allow users to select and execute each function. (algorithm 2)
+
+1. Start
+
+2. Displaying the menu as :
+	System.out.println("\nEnter which of the operation would you like.");
+    	System.out.println("Enter 1 for Displaying Total Marks.");
+	System.out.println("Enter 2 for Displaying students less than provided Threshold.");
+    	System.out.println("Enter 3 for Displaying ten students having lowest marks.");
+    	System.out.println("Enter 4 for Displaying ten students having highest marks.");
+    	
+3. Using Scanner object for input.
+    	int operationType = sc.nextInt();
+    	
+4. Using switch operation to display the respective task.
+
+5. Asking user whether to close the program or continue with other options.
+	(wantToContinue != 0)
+        System.out.println("Do you Want to Continue... '0' for no, and yes for other numbers.");
+
+6. Terminating if user enters number 0 or continue if the user inputs other numbers.
+
+7. End.
